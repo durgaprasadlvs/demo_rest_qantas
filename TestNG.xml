@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test">
+
+    <test name="Test Automation Framework" parallel="false">
+        <packages>
+            <package name="com.qantas.demo.tests"/>
+        </packages>
+    </test>
+
+</suite>
