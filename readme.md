@@ -37,8 +37,10 @@
 
 - The above command will run the 2 functional tests and 2 performance tests provided in the tests directory
 
-##### Ran performance tests on different latitudes and longitudes 
-###### test data is present in **_lat_long_data.csv_** 
+### Ran performance tests on different latitudes and longitudes 
+##### test data is present in **_lat_long_data.csv_** 
+
+- End point : https://api.weatherbit.io/v2.0/current?lat={lat}&lon={lon}
 
 ```jshelllanguage
 Latitude - 47.1443 == Longitude - -122.1408
@@ -94,8 +96,10 @@ Response Time - 1564 milli seconds
 Total response time - 15.297 seconds
 ```
 
-##### Ran performance tests on different postcodes are given 
-###### test data is present in **_postcodes.csv_** 
+### Ran performance tests on different postcodes are given 
+##### test data is present in **_postcodes.csv_** 
+
+- End point : https://api.weatherbit.io/v2.0/forecast/hourly?postal_code={postcode}
 
 ```jshelllanguage
 Postcode - 98391 -- Response Time - 1389 milli seconds
