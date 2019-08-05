@@ -60,9 +60,11 @@ public class api_performance_tests {
 
             total_response_time += response_time;
 
+            System.out.println("Latitude - " + latitude + " == Longitude - " + longitude);
+
             System.out.println("City - " + cityName + " == State - " + stateCode);
 
-            System.out.println("Response Time - " + response_time + " milli seconds");
+            System.out.println("Response Time - " + response_time + " milli seconds\n\n");
 
         }
 
@@ -95,7 +97,6 @@ public class api_performance_tests {
 
             String postcode = record.get("postcode");
 
-
             Response response = base.GetHourlyWeatherByPostcode(postcode);
 
             String json_response = StringEscapeUtils.unescapeJson(response.getBody().asString());
@@ -119,7 +120,7 @@ public class api_performance_tests {
 
             total_response_time += response_time;
 
-            System.out.println("Postcode - " + postcode + " - Response Time - " + response_time + " milli seconds");
+            System.out.println("Postcode - " + postcode + " -- Response Time - " + response_time + " milli seconds");
 
         }
 

@@ -18,7 +18,7 @@ import java.util.TreeMap;
 public class api_functional_tests {
 
     @Test(testName = "Get Statecode for given latitude and longitude")
-    public void testGetStateCodeFromCurrentWeather() {
+    public void testGetStateCodeFromCurrentWeather() throws Exception{
 
         api_base base = new api_base();
 
@@ -35,7 +35,7 @@ public class api_functional_tests {
     }
 
     @Test(testName = "Get Hourly forecast for given postcodes")
-    public void testGetHourlyTimestampWeather() {
+    public void testGetHourlyTimestampWeather() throws Exception{
 
         api_base base = new api_base();
 

@@ -5,15 +5,23 @@ import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
+import java.util.Properties;
+
 
 public class api_base {
 
-    private static String baseURI = "https://api.weatherbit.io/v2.0/";
-    private static String apiKey = "6076c331aeb04fabbb72d08d896d48fb";
+    private static String baseURI;
+    private static String apiKey;
     protected RequestSpecification httpRequest;
 
 
-    public api_base() {
+    public api_base() throws Exception {
+
+        Properties configProperties = new Properties();
+        configProperties.load(api_base.class.getResourceAsStream("config.properties"));
+
+        this.baseURI = configProperties.getProperty("url");
+        this.apiKey = configProperties.getProperty("apiKey");;
     }
 
     public Response GetCurrentWeather(Double lat, Double lon) {

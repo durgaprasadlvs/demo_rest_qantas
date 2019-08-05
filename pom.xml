@@ -19,6 +19,13 @@
                 </configuration>
             </plugin>
         </plugins>
+
+        <testResources>
+            <testResource>
+                <directory>src\test\java\com\qantas\demo\resources</directory>
+            </testResource>
+        </testResources>
+
     </build>
 
     <properties>
